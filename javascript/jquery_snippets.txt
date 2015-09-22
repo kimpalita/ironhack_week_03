@@ -1,0 +1,45 @@
+//———— simple jquery stuff—————
+
+function boxcolor(){
+   if ($("#username").val().length > 5){
+   $("#otherbox").css("background-color", "yellow");
+   }
+   if ($("#username").val().length > 10){
+   $("#otherbox").css("background-color", "red");
+   }
+   if ($("#username").val().length <= 5){
+   $("#otherbox").css("background-color", "white");
+   }
+}
+
+$("#username").on('keyup', boxcolor);
+
+
+
+//——————————— Event Listener ———————
+
+function changeBox(){
+  renderWhenReady(function(color){
+    $('#otherbox').css('background-color', color);
+  });
+}
+
+function renderWhenReady(renderCallBack){
+  setTimeout(function(){ //setTimeout in this case is only used for simulation.
+    //var currentTime = new Date().toLocaleString();
+    //some condition with current time…possibly
+    renderCallBack('orange');
+    }, 1000);
+}
+
+$('#username').on('keyup', changeBox);
+
+//———————— Event Listener using external data —————
+
+$(‘document’).ready(function(){
+$(‘submit’).on(‘click’, changeBox);
+function changeBox(){
+	renderWhenReady(function(color){
+		$(‘#otherBox’).css(‘background-color’, color);
+	});
+}

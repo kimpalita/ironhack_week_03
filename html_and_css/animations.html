@@ -1,0 +1,126 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Animation</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+		<style>
+
+				/* transform: scale(2); */
+				/* transform: rotate(45deg); */
+				/* transform: tranlateX(100px); */
+				/* transform: tranlateY(100px); */
+				/* transform: skew(20deg); */
+
+			.box {
+				width: 150px;
+				background: red;
+				height: 150px;
+				z-index: 4;
+
+				-webkit-animation-name: spin;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+
+				animation-name: spin;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+				
+			}
+
+			.box2 {
+				width: 300px;
+				background: green;
+				height: 100px;
+				width: 100px;
+
+			}
+
+			.box2.highlight{
+				-webkit-animation-name: movement;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-delay: 2s;
+				/* -webkit-animation-iteration-count: infinite; */
+				-webkit-animation-direction: alternate;
+				-webkit-animation-fill-mode: forwards;  /* to make animation freeze at final point -- remember to remove iteration count */
+
+				animation-name: movement;
+				animation-duration: 3s;
+				animation-delay: 2s;
+			}
+
+			@-webkit-keyframes movement{
+				0% {
+					width: 100px;
+					opacity: 0;
+				}
+
+				100%{
+					width: 800px;
+					opacity: 100;
+				}
+			}
+
+			@keyframes movement{
+				0% {
+					width: 100px;
+					opacity: 0;
+				}
+
+				100%{
+					width: 800px;
+					opacity: 100;
+				}
+			}
+
+			@-webkit-keyframes spin{
+				0% {
+					transform: rotate(0);
+				}
+
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+
+			@keyframes spin{
+				0% {
+					transform: rotate(0);
+				}
+
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+
+
+
+
+		</style>
+	</head>
+	
+	<body>
+		<p id="button">Play</p>
+		<div class="box">there</div>
+		<div class="box2">hey</div>
+
+		<script>
+
+	$( document ).ready(function() {
+		$('#button').click(function() {
+			$( ".box2" ).toggleClass( "highlight" );
+		});
+});
+		
+	</script>
+
+
+
+
+	</body>

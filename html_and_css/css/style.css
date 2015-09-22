@@ -1,0 +1,161 @@
+body {
+	padding: 40px;
+}
+
+h1 {
+	font: bold 36px/40px Helvetica, Arial, Verdana;
+	color: #ffffff;
+	text-shadow: 1px 0 10px #000;
+}
+
+p {
+	/*font-family: 'Helvetica', Arial, Verdana;
+    font-size: 18px;
+    line-height: 28px;*/
+
+	font: 18px/28px Helvetica, Arial, Verdana;
+	/*color: rgba(0, 0, 0, .5);*/
+}
+
+.header--big {
+	background: green;
+	height: 400px;
+	width: 400px;
+	position: relative;
+}
+
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+a:active{
+
+}
+
+.comments img{
+	float: left;
+}
+
+
+
+/* ------------ PSEUDO ELEMENTS --------------- */
+
+
+.menu{
+	margin-bottom: 20px;
+}
+
+.menu li{
+	display: inline;
+	border-left: solid 1px grey;
+	margin-left: 10px;
+	padding-left: 10px;
+	font-family: sans-serif;
+	/*transition: all 1s ease-in;*/
+	transition: background 1s ease-in, padding 2s;
+}
+
+ul.highlight li{
+	background: red;
+	padding-right: 20px;
+}
+
+.menu li:first-child{
+	border: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.box{
+	background: green;
+	height: 200px;
+	width: 200px;
+	position: relative;
+	display: inline-block;
+}
+
+.box:before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: red;
+	display: block;
+	top: 20px;
+	right: 20px;
+	position: absolute;
+}
+
+.box2{
+	height: 200px;
+	width: 200px;
+	position: relative;
+	background: red;
+	display: inline-block;
+}
+
+.box2:before{
+	content: "";
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	display: block;
+	border: 16px solid transparent;
+	border-bottom: 16px solid red;
+	left: 20px;
+	top: -32px;
+}
+
+.box3{
+	height: 200px;
+	width: 200px;
+	position: relative;
+	background: green;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.box3:before{
+	content: "";
+	height: 100%;
+	display:inline-block;
+	vertical-align: middle;
+	margin-left: -5px;
+}
+
+#circle{
+	background: red;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin: 0 auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.box4{
+	height: 200px;
+	width: 200px;
+	position: relative;
+	background: green;
+	text-align: center;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+

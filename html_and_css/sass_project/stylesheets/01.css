@@ -1,0 +1,37 @@
+/* line 11, ../sass/01.scss */
+.container {
+  background: #ff5500;
+  width: 940px;
+}
+/* line 15, ../sass/01.scss */
+.container .block1 {
+  background: green;
+}
+/* line 19, ../sass/01.scss */
+.container:before {
+  margin: 20px;
+}
+
+/* line 24, ../sass/01.scss */
+h1 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* line 28, ../sass/01.scss */
+h2 {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+/* line 33, ../sass/01.scss */
+a {
+  color: #ff5500;
+}
+/* line 35, ../sass/01.scss */
+ahover {
+  text-decoration: underline;
+}
